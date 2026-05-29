@@ -1,21 +1,124 @@
-<<<<<<< HEAD
-# React + Vite
+# TSP Route Optimizer 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Demo: https://tsp-route-optimizer.vercel.app/
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+TSP Route Optimizer is a React-based web application that helps users find an efficient route between multiple cities using the Traveling Salesman Problem (TSP) concept.
 
-## React Compiler
+Users can add cities dynamically, visualize locations on an interactive map, and generate an optimized route using the Nearest Neighbor heuristic. The application displays routes on real maps using OpenStreetMap, Leaflet, and OSRM routing services.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# TSP-ROUTE-OPTIMIZER
-TSP ROUTE OPTIMIZER(OPTIMIZE THE ROUTE U TEVELLING TO...)
->>>>>>> 6b78a857cf31f9beacaf8ba5007ad59e2c713498
+* Add cities dynamically using city name search
+* Fetch real city coordinates using OpenStreetMap Nominatim API
+* Interactive map visualization using Leaflet
+* Route optimization using TSP Nearest Neighbor Algorithm
+* Real road route rendering using OSRM Routing API
+* Animated route visualization
+* Dark Mode support
+* Responsive design for desktop and mobile devices
+* Route summary with total distance and stops
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* React.js
+* Vite
+* Tailwind CSS
+
+### Maps & APIs
+
+* Leaflet
+* React Leaflet
+* OpenStreetMap
+* Nominatim API
+* OSRM Routing API
+
+### Algorithms
+
+* Traveling Salesman Problem (TSP)
+* Nearest Neighbor Heuristic
+* Haversine Distance Formula
+
+### Deployment
+
+* Vercel
+
+---
+
+## How It Works
+
+1. User enters city names.
+2. The application fetches latitude and longitude coordinates using the Nominatim API.
+3. Distances between cities are calculated using the Haversine Formula.
+4. The Nearest Neighbor heuristic determines an efficient visiting order.
+5. OSRM Routing API generates real road paths between cities.
+6. The optimized route is displayed on an interactive map.
+
+---
+
+## Project Structure
+
+```text
+src/
+├── components/
+│   ├── CityList.jsx
+│   ├── CitySelector.jsx
+│   ├── MapView.jsx
+│   └── RouteInfo.jsx
+│
+├── utils/
+│   ├── distance.js
+│   └── tsp.js
+│
+├── App.jsx
+└── main.jsx
+```
+
+## Screenshots
+
+Add screenshots of:
+
+* Home Page
+* Optimized Route
+* Dark Mode
+* Mobile View
+
+---
+
+## Future Improvements
+
+* Save Routes using MongoDB
+* User Authentication
+* Route History
+* Greedy vs Optimal Route Comparison
+* Route Export as PDF
+* Advanced TSP Algorithms
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/lalithcharan962/TSP-ROUTE-OPTIMIZER.git
+
+cd TSP-ROUTE-OPTIMIZER
+
+npm install
+
+npm run dev
+```
+
+---
+
+## Author
+
+Lalith Charan
+
+B.Tech CSE | Full Stack Development | DSA | AI Enthusiast
